@@ -1,38 +1,208 @@
-.App {
-  text-align: center;
+.post{
+    display: flex;
+    
+    justify-content:    space-around;
+    
+    /* flex-direction:column; */
+}
+.tableInput{
+    margin-top: 15px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    width: 400px;
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px 3px #99999963;
+    background-color: azure;
+}
+.image{
+    margin-right: 10px;
+    width: 30px;height: 30px;
+    border-radius: 50%;
+}
+.inputValue{
+    background-color: azure;
+    height: auto;
+    flex: 2;
+
+}
+.icon{
+    display: flex;
+    padding-left: 10px;
+    justify-content:    space-around;
+    width: 50px;
+}
+.listPost{
+    border-radius: 10px;
+    padding: 0 10px;
+    width: 400px;
+    
+    height: auto;
+    background-color: azure;
+    box-shadow: 3px 3px 3px 3px #99999963;
+    margin-bottom: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.info{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    height: 30px;
+    padding: 10px 0; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.info .image{
+    height: 30px;
+}
+.info p{
+    font-weight: 500;
+    font-size: 13px;
+    flex: 2;
+    align-items: center;
+
+}
+.flag-flow{
+    display: flex;
+    padding-left: 10px;
+    justify-content:    space-around;
+    width: 50px;
+}
+.data{
+    min-height: 20px;
+    display: flex;
+    justify-content: left;
+    height: auto;
+    width: auto;
+    background-color: azure;
+    border-radius: 10px;
+}
+.data a{
+    padding: 5px;
+    font-size: 10px;
+
+}
+.drop{
+    display: flex;
+    margin-top: 5px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    border-top: solid 1px rgb(213,213,213);
+    justify-content: space-between;
+    color: #64758f;
+    font-size: 12px;
+    height: 20px;
+}
+.drop .fa-solid{
+    padding-right: 5px;
+}
+.green{
+    color: greenyellow;
+}
+.flow{
+    align-items: center;
+    display: flex;
+}
+.red{
+    color: red;
+}
+.flag{
+    align-items: center;
+    display: flex;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.comment{
+    align-items: center;
+    display: flex;
+}
+.save{
+    display: flex;
+    align-items: center;
+}
+.yellow{
+    color: #eaff00;
+}
+.flow:hover{
+    cursor: pointer;
+}
+.flag:hover{
+    cursor: pointer;
+}
+.comment:hover{
+    cursor: pointer;
+}
+.save:hover{
+    cursor: pointer;
+}
+button:hover{
+    cursor: pointer;
+
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+
+
+.box-input{
+    position: fixed;
+    top: 0;right: 0;left: 0;bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000080;
+}
+.open{
+    display: flex;
+}
+.main-input{
+    border-radius: 10px;
+    width: 380px;
+    max-width: calc(100%-32px);
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    padding: 0 10px;
+    font-size: 14px;
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    border-bottom: 1px solid rgb(213, 213, 213);
+    padding: 5px 0;
+}
+.title-input p{
+    font-size: 18px;
+    height: 30px;
+}
+.title i{
+    right: 0;
+}
+textarea{
+    width: 100%;
+    outline: none;
+    border: 0;
+    padding: 0;
+    resize: none;
+}
+.addInput{
+    display: flex;
+    height: 50px;
+    border-top: 1px solid rgb(213, 213, 213);
+    justify-content: center;
+
+}
+.addInput button{
+    margin: 10px 0;
+    border: 0;
+    padding: 5px 40px;
+    border-radius: 5px;
+    background-color: #6b85c6;
+    /* background-color: #4261a4; */
+
+}
+.addInput button:hover{
+    padding: 8px 50px;
 }
