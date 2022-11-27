@@ -9,7 +9,7 @@ function App() {
   const [drop,setDrop] =  useState(0);
   const [count, setCount] = useState(0);
   const [value,setValue] = useState('');
-  const [list,setList] = useState([])
+  const [list,setList] = useState(JSON.parse(localStorage.getItem('list.note')) ??[])
   const [thuTu,setThuTu] = useState(0);
   const [randomSeed,setRandomSeed] = useState()
   const [randomFlag,setRandomFlag] = useState()
