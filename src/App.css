@@ -15,7 +15,7 @@
     margin-bottom: 10px;
     border-radius: 10px;
     box-shadow: 3px 3px 3px 3px #99999963;
-    background-color: azure;
+    background-color: #b8d8bf;
 }
 .image{
     margin-right: 10px;
@@ -23,7 +23,7 @@
     border-radius: 50%;
 }
 .inputValue{
-    background-color: azure;
+    background-color: #b8d8bf;
     height: auto;
     flex: 2;
 
@@ -40,7 +40,7 @@
     width: 400px;
     
     height: auto;
-    background-color: azure;
+    background-color: #daefdc;
     box-shadow: 3px 3px 3px 3px #99999963;
     margin-bottom: 10px;
 }
@@ -59,15 +59,16 @@
 .info p{
     font-weight: 500;
     font-size: 13px;
-    flex: 2;
+    flex: 3;
     align-items: center;
 
 }
 .flag-flow{
     display: flex;
     padding-left: 10px;
-    justify-content:    space-around;
+    justify-content:    space-between;
     width: 50px;
+    color: #354f52;
 }
 .data{
     min-height: 20px;
@@ -75,7 +76,7 @@
     justify-content: left;
     height: auto;
     width: auto;
-    background-color: azure;
+    background-color: #daefdc;
     border-radius: 10px;
 }
 .data a{

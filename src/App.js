@@ -9,8 +9,10 @@ function App() {
   const [drop,setDrop] =  useState(0);
   const [count, setCount] = useState(0);
   const [value,setValue] = useState('');
-  const [list,setList] = useState(JSON.parse(localStorage.getItem('list.post')) ?? [])
+  const [list,setList] = useState([])
   const [thuTu,setThuTu] = useState(0);
+  const [randomSeed,setRandomSeed] = useState()
+  const [randomFlag,setRandomFlag] = useState()
   useEffect(()=>{
     localStorage.setItem("list.post",JSON.stringify(list))
     console.log(JSON.parse(localStorage.getItem("list.post")));
@@ -18,6 +20,8 @@ function App() {
   var id=0;
   function handleClick() {
     setCount(count + 1);
+    setRandomSeed(Math.floor(Math.random() * 11))
+    setRandomFlag(Math.floor(Math.random() * 11))
   }
   const onHandleChange=(e)=>{
     setValue(e.target.value)
@@ -29,8 +33,9 @@ function App() {
       setCount(count+1)
       return
     }else{
+
       setThuTu(thuTu+1)
-      setList([{id:thuTu,Text:value,Drop:false,flag:false,note:false},...list]);
+      setList([{id:thuTu,Drop:false,flag:false,note:false,Text:value,totalSeed:randomSeed,totalFlag:randomFlag},...list]);
       setCount(count + 1);
       setValue('')
       console.log(list);
@@ -149,8 +154,10 @@ function App() {
             <img className='image' src={image}></img>
             <p>Nguyễn Khoa Nhật Huy</p>
             <div className='flag-flow'>
-            <i className={(task.Drop!=true)?"fa-solid fa-seedling":"fa-solid fa-seedling green"}></i>
-            <i className={(task.flag!=true)?"fa-solid fa-flag":"fa-solid fa-flag red"}></i>
+                <a className={(task.Drop!=true)?"":"green"}>{(task.Drop==true)?task.totalSeed+1:(task.totalSeed==0)?'':task.totalSeed}</a>
+                <i className={(task.Drop!=true)?"fa-solid fa-seedling":"fa-solid fa-seedling green"}></i>
+                <a className={(task.flag!=true)?"":"red"}>{(task.flag==true)?task.totalFlag+1:(task.totalFlag==0)?'':task.totalFlag}</a>
+                <i className={(task.flag!=true)?"fa-solid fa-flag":"fa-solid fa-flag red"}></i>
             </div>
           </div>
           <div className='data'>
